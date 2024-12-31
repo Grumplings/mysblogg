@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Roboto';
   src: url('fonts/Roboto-Regular.ttf') format('truetype'),
-  url('fonts/Roboto-Bold.ttf') format('truetype'),
-  url('fonts/Roboto-Light.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
+    url('fonts/Roboto-Bold.ttf') format('truetype'),
+    url('fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat';
   src: url('fonts/MontserratAlternates-Regular.ttf') format('truetype'),
-  url('fonts/MontserratAlternates-Bold.ttf') format('truetype');
+    url('fonts/MontserratAlternates-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,10 +20,11 @@ body {
 }
 
 p {
-font-weight: normal;
+  font-weight: normal;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
@@ -36,15 +37,16 @@ h1, h2 {
   font-weight: 700;
 }
 
-.navbar-nav .nav-link:hover { 
-  color:rgb(255, 255, 255);
+.navbar-nav .nav-link:hover {
+  color: rgb(255, 255, 255);
   background-color: rgb(255, 153, 0);
 
 }
 
-.nav-link.active { /* Så att man ser vilken sida man är på konstant, lite fult kanske */
+.nav-link.active {
+  /* Så att man ser vilken sida man är på konstant, lite fult kanske */
   font-weight: bold;
-  background-color:rgba(245, 144, 13, 0.5);
+  background-color: rgba(245, 144, 13, 0.5);
   border-radius: 100px;
 }
 
@@ -111,15 +113,15 @@ footer i {
   .row {
     flex-direction: column;
     margin: 0;
-}
+  }
 
-.col-md-4 {
-  flex: 0 0 100%;
-  margin-bottom: 16px;
-}
+  .col-md-4 {
+    flex: 0 0 100%;
+    margin-bottom: 16px;
+  }
 
-.image-gallery img {
-  max-width: 90%;
-}
+  .image-gallery img {
+    max-width: 90%;
+  }
 
 }
