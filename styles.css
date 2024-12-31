@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Regular.ttf') format('truetype'),
+  url('fonts/Roboto-Bold.ttf') format('truetype'),
+  url('fonts/Roboto-Light.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/MontserratAlternates-Regular.ttf') format('truetype'),
+  url('fonts/MontserratAlternates-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+font-weight: normal;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.light-text {
+  font-weight: 300;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link:hover { 
+  color:rgb(255, 255, 255);
+  background-color: rgb(255, 153, 0);
+
+}
+
+.nav-link.active { /* Så att man ser vilken sida man är på konstant, lite fult kanske */
+  font-weight: bold;
+  background-color:rgba(245, 144, 13, 0.5);
+  border-radius: 100px;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+.article {
+  flex: 1;
+  margin: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.col-md-4 {
+  flex: 1 0 32% !important;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+.image-gallery {
+  width: 100%;
+  text-align: center;
+}
+
+.image-gallery img {
+  max-width: 100% !important;
+  max-height: 500px !important;
+  height: auto !important;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+footer {
+  font-size: 12px;
+  font-family: 'Merriweather', serif;
+}
+
+footer i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: rgb(255, 106, 0);
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column;
+    margin: 0;
+}
+
+.col-md-4 {
+  flex: 0 0 100%;
+  margin-bottom: 16px;
+}
+
+.image-gallery img {
+  max-width: 90%;
+}
+
+}

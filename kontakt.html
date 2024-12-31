@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - Min Blogg</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <!--FONT AWESOME-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Min Blogg</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Hem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="artikel1.html">Sengångare</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="artikel2.html">Tvättbjörn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="artikel3.html">Capybara</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Kontakt.html">Kontakta oss!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="container mt-5">
+    <h1 class="bold-text">Kontakta oss!</h1>
+    <form id="contact-form" action="javascript:void(0);" method="post" class="needs-validation" novalidate>
+
+      <div class="mb-3"> <!-- Förnamn i formulär-->
+        <label for="firstname" class="form-label">Förnamn</label>
+        <input type="text" class="form-control" id="firstname" name="firstname" required>
+        <div class="invalid-feedback">Vänligen ange ditt förnamn</div>
+      </div>
+
+      <div class="mb-3"> <!-- Efternamn i formulär-->
+        <label for="surname" class="form-label">Efternamn</label>
+        <input type="text" class="form-control" id="surname" name="surname" required>
+        <div class="invalid-feedback">Vänligen ange ditt efternamn</div>
+      </div>
+
+      <div class="mb-3"> <!-- Email i formulär -->
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+        <div class="invalid-feedback">Vänligen ange din email-adress</div>
+      </div>
+
+      <div class="mb-3"> <!-- Telefonnummer i formuläret-->
+        <label for="phone" class="form-label">Telefonnummer</label>
+        <input type="tel" class="form-control" id="phone" name="phone" required>
+        <div class="invalid-feedback">Vänligen ange ditt telefonnummer</div>
+      </div>
+
+      <div class="mb-3"> <!-- Meddelande i formuläret-->
+        <label for="message" class="form-label">Meddelande</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        <div class="invalid-feedback">Vänligen ange ditt meddelande</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Skicka formulär</button> <!--Knapp för att skicka formulär-->
+    </form>
+  </section>
+
+<footer class="light-text bg-light text-center p-3 mt-5">
+  <p>&copy; 2024 Mys Blogg</p>
+  <p>Följ mig på sociala medier:</p>
+  <a href="https://facebook.com" class="social-link"><i class="fab fa-facebook"></i></a>
+  <a href="https://twitter.com" class="social-link"><i class="fab fa-twitter"></i></a>
+  <a href="https://instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
+</footer>
+
+  <!-- BOOTSTRAP JS OCH POPPER.JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <!-- Formulärvalidering och tackmeddelande -->
+  <script>
+    var form = document.getElementById('contact-form');
+    form.addEventListener('submit', function (event) {
+      // Om formuläret INTE är giltigt -> stoppa forumlär från att skickas
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation(); 
+      } else {
+        // OM formuläret är giltigt -> visa tackmeddelandet
+        event.preventDefault(); // Stoppa omladdning av sida efter det skickats
+        const thankYouMessage = document.createElement('div');
+        thankYouMessage.classList.add('alert', 'alert-success');
+        thankYouMessage.textContent = 'Tack för ditt meddelande. Vi kommer kontakta dig inom kort.';
+
+        // För att rensa formuläret och visa tackmeddelande
+        form.innerHTML = '';
+        form.appendChild(thankYouMessage);
+      }
+
+      form.classList.add('was-validated');
+    });
+  </script>
+
+</body>
+
+</html>
